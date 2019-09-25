@@ -7,6 +7,11 @@ const getItemsSuccess = (data) => {
   $('form').trigger('reset')
 }
 
+const deleteItemSuccess = () => {
+  console.log('Deleted')
+}
+
 module.exports = {
-  getItemsSuccess
+  getItemsSuccess,
+  deleteItemSuccess
 }
