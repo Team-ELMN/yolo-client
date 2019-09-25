@@ -13,4 +13,18 @@ const getItems = function () {
   })
 }
 
-module.exports = getItems
+const deleteItem = (itemId) => {
+  return $.ajax({
+    url: config.apiUrl + `/items/${itemId}`,
+    method: 'DELETE',
+    headers: {
+      // We use bearer. Syntax?
+      Authorization: `Bearer ${store.user.token}`
+    }
+  })
+}
+
+module.exports = {
+  getItems,
+  deleteItem
+}
