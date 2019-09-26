@@ -25,11 +25,15 @@ const updateItemSuccess = (data) => {
 const deleteItemSuccess = () => {
   console.log('Deleted')
 }
+const signOutSuccess = function () {
+console.log('Signed out')
+}
 
 module.exports = {
   getItemsSuccess,
   onCreateSuccess,
   onCreateFailure,
   updateItemSuccess,
-  deleteItemSuccess
+  deleteItemSuccess,
+  signOutSuccess
 }

@@ -45,9 +45,21 @@ const deleteItem = (itemId) => {
   })
 }
 
+// Deletes Token
+const signOut = function () {
+  return $.ajax({
+    url: config.apiUrl + '/sign-out',
+    method: 'DELETE',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    }
+  })
+}
+
 module.exports = {
   getItems,
   create,
   updateItem,
-  deleteItem
+  deleteItem,
+  signOut
 }
