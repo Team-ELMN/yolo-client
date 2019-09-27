@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>YOLO</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Do not add `link` tags-->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+      <!-- Do not add `script` tags-->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+    </head>
+    <body>
+      <h1>YOLO</h1>
+
+      <!-- Messages -->
+      <section class='login-messages'>
+      <div id="login-message"></div>
+      </section>
+      <section class='item-messages'>
+      <div id="item-message"></div>
+      </section>
+      <section class='messages'>
+      <div id="message"></div>
+      </section>
+      <!-- Messages end -->
+
+      <nav></nav>
+      <section class="change-pwd"></section>
+      <section class="main"></section>
+
+      <fieldset>
+        <div class="content" id="some-content"></div>
+      </fieldset>
+
+
+<div class="modal fade" id="item-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Update YOLO Item</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+      <form id="update-item-modal">
+        <div class="modal-body mx-3">
+          <input id="item-id" type="text" name="item[_id]" hidden>
+
+          <div class="md-form mb-4">
+            <input type="text" id="iname" class="form-control validate" name="item[title]" placeholder="Title">
+          </div>
+          <div class="md-form mb-4">
+            <input type="text" id="item-desc" class="form-control validate" name="item[description]" placeholder="Description">
+          </div>
+          <div class="md-form mb-4">
+            <input type="radio" id="item-true" name="item[completed]" value="true"> Completed
+            <br>
+            <input type="radio" id="item-false" name="item[completed]" value="false"> Not yet
+            <!-- <input type="checkbox" id="item-completed" class="form-control validate" name="item[completed]" value="true"> Completed <br>
+            <input type="checkbox" id="item-not-completed" class="form-control validate" name="item[completed]" value="false"> Not Yet <br> -->
+
+            <div class="modal-footer d-flex justify-content-center">
+              <button type="submit" class="btn btn-info btn-block my-4 submit-item">Update</button>
+            </div>
+          </div>
+        </div>
+
+      </form>
+    </div>
+  </div>
+</div>
+
+    </body>
+</html>
